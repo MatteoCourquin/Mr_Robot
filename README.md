@@ -1,13 +1,13 @@
 # Mr_Robot
 
-####*Card Generator :*
+*Card Generator :*
 
 
 
-####*Password Generator :*
+*Password Generator :*
 
 
-####*Pin code :*
+*Pin code :*
 
 
-####*Binery to Hexa :*
+*Binery to Hexa :*

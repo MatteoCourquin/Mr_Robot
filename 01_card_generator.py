@@ -4,7 +4,7 @@ import random
 
 # Variables
 
-type_card = input("Entrez 'visa' ou 'mastercard' : ")
+type_card = input("Enter 'visa' or 'mastercard' : ")
 
 card = []
 
@@ -27,8 +27,7 @@ if type_card == "visa" or type_card == "mastercard":
 
         card.append(random_number)
 
-    print(f" Voici votre carte {type_card} : {''.join(map(str, card[0:4]))} {''.join(map(str, card[4:8]))} {''.join(map(str, card[8:12]))} {''.join(map(str, card[12:16]))}")
+    print(f" Here's your card {type_card} : {''.join(map(str, card[0:4]))} {''.join(map(str, card[4:8]))} {''.join(map(str, card[8:12]))} {''.join(map(str, card[12:16]))}")
 
 elif type_card != "mastercard" or type_card != 'visa':
-    print("Le format de la carte n'est pas valide")
-
+    print("Format is not valid.")
