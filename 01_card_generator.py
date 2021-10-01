@@ -1,0 +1,6 @@
+# Import
+
+import random
+
+# Fonctions
+
