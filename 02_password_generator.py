@@ -1,15 +1,19 @@
+# Import
 
 import random
 import string
 
 
-
+# Variables
 
 length_password = input('How long for your password? : ')
 
 password = []
 
 counter = 0
+
+
+# Execution
 
 if length_password.isnumeric():
 

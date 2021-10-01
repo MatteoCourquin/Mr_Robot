@@ -2,6 +2,7 @@
 
 import random
 
+
 # Variables
 
 type_card = input("Enter 'visa' or 'mastercard' : ")
@@ -9,6 +10,7 @@ type_card = input("Enter 'visa' or 'mastercard' : ")
 card = []
 
 counter = 0
+
 
 # Execution
 

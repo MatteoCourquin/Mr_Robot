@@ -12,6 +12,12 @@ And I post it last.
 
 ***Password Generator :***
 
+First, I check (with an if) if the user entered a number. If it is not the case I return an error to him.
+
+Then (in a while loop) I generate random numbers and letters.
+
+Then I mix it all up and display my password proposal
+
 
 ***Pin code :***
 
