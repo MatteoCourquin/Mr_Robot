@@ -7,8 +7,9 @@ import random
 
 # Password parameters
 
-# hash_we_have = "8a069869956a4e0cf7ac69f9c20e0d49" (Password 8 numbers)
-hash_we_have = "5c53292c032b6cb8510041c54274e65f"
+# hash_we_have = "8a069869956a4e0cf7ac69f9c20e0d49"
+# hash_we_have = "8b270711503c2cb2bb68b836e9cd06ab" 969881
+hash_we_have = "f515fc52614cf73ec5203a5308ce33db"
 
 
 
@@ -16,31 +17,28 @@ hash_we_have = "5c53292c032b6cb8510041c54274e65f"
 
 def find_hash(hash):
 
-    wanted_mdp = []
+    wanted_mdp = [0, 0, 0, 0, 0, 0, 0, 0]
+    counter = 0
 
     while hash != wanted_mdp:
-        generate_mdp(wanted_mdp)
-        hash = hashlib.md5(''.join(map(str, wanted_mdp)).encode())
+
+        hash = hashlib.md5(hash.encode())
         hash_hexa = hash.hexdigest()
-        print(''.join(map(str, wanted_mdp)))
+
+        wanted_mdp -= 1
+        counter += 1
+
+        print(wanted_mdp)
         print(hash_hexa)
+        print(f"Le nombre de tentative est de {counter}")
 
-        if hash_hexa == hash_we_have:
+        if hash == hash_hexa:
 
-            print(f"Your password is : {''.join(map(str, wanted_mdp))}")
+            print(f"Your password is : {wanted_mdp}")
             print(f"Your pass word hash is : {hash_hexa}")
             break
-
-        wanted_mdp.clear()
-
-
-def generate_mdp(random_mdp):
-    for i in range(4):
-        random_number = (random.randint(1, 9))
-        random_mdp.append(random_number)
-
-
 
 # Execution
 
 print(find_hash(hash_we_have))
+
