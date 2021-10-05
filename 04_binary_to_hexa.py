@@ -1,30 +1,60 @@
+# Input
+
 binary = input("Enter an binary number : ")
 
 
-def return_hexa(decimal):
-    if decimal == 1:
+
+# Functions
+
+def return_hexa(result):
+    if result == 1:
         hexa = "A"
-    elif decimal == 2:
+    elif result == 2:
         hexa = "B"
-    elif decimal == 3:
+    elif result == 3:
         hexa = "C"
-    elif decimal == 4:
+    elif result == 4:
         hexa = "D"
-    elif decimal == 5:
+    elif result == 5:
         hexa = "E"
-    elif decimal == 6:
+    elif result == 6:
         hexa = "F"
 
     print(f"Héxa is {hexa}")
     print(f"Décimal is {result}")
 
 
-result = ((int(binary[0])) * (2 ** 3)) + ((int(binary[1])) * (2 ** 2)) + ((int(binary[2])) * (2 ** 1)) + ((int(binary[3])) * (2 ** 0))
+
+# Variables
+
+a = 0
+b = 1
+c = 2
+d = 3
 
 
-if len(str(result)) == 1:
-    print(return_hexa(result))
-elif len(str(result)) == 2:
-    int_result = (tuple(int(c) for c in str(result)))
-    decimal = int_result[0] + int_result[1]
-    print(return_hexa(decimal))
+
+# Execution
+
+if len(binary) == 20:
+
+    for i in range(5):
+
+        result = ((int(binary[a])) * (2 ** 3)) + ((int(binary[b])) * (2 ** 2)) + ((int(binary[c])) * (2 ** 1)) + ((int(binary[d])) * (2 ** 0))
+
+        i += 1
+
+        a += 4
+        b += 4
+        c += 4
+        d += 4
+
+
+        if len(str(result)) == 1:
+            print(return_hexa(result))
+        elif len(str(result)) == 2:
+            int_result = (tuple(int(c) for c in str(result)))
+            decimal = int_result[0] + int_result[1]
+            print(return_hexa(decimal))
+else:
+    print("Error ! Format is not valid")
