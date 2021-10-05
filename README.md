@@ -40,4 +40,4 @@ Below I create a condition to check if the user has entered a binary. If it's ok
 
 If the format of the binary is correct I launch a loop which calculates by portion of 4 the result of my binary. Then I call on my function to retrieve the letters.
 
-Finally I display all.
+Finally I display all.# algorithmie-MatteoCourquin
