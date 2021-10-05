@@ -1,44 +1,42 @@
 # Import
 
 import hashlib
-import random
 
 
+# Variables
 
-# Password parameters
-
-# hash_we_have = "8a069869956a4e0cf7ac69f9c20e0d49"
-# hash_we_have = "8b270711503c2cb2bb68b836e9cd06ab" 969881
-hash_we_have = "f515fc52614cf73ec5203a5308ce33db"
+hash_we_have = "8a069869956a4e0cf7ac69f9c20e0d49"
+# 72047838
 
 
 
 # Functions
 
-def find_hash(hash):
+def find_hash(hash_we_have):
 
-    wanted_mdp = [0, 0, 0, 0, 0, 0, 0, 0]
-    counter = 0
+    str2hash = 99999999
 
-    while hash != wanted_mdp:
+    # str2hash = 73047838 (fonction de test pour soulager nos ordis ;) )
 
-        hash = hashlib.md5(hash.encode())
-        hash_hexa = hash.hexdigest()
+    while hash_we_have != str2hash:
 
-        wanted_mdp -= 1
-        counter += 1
+        hash = hashlib.md5(str(str2hash).encode())
 
-        print(wanted_mdp)
-        print(hash_hexa)
-        print(f"Le nombre de tentative est de {counter}")
+        print(hash.hexdigest())
+        print(str2hash)
 
-        if hash == hash_hexa:
-
-            print(f"Your password is : {wanted_mdp}")
-            print(f"Your pass word hash is : {hash_hexa}")
+        if hash.hexdigest() == hash_we_have:
+            print(f"Your password is {str2hash}")
+            print(f"Your password hash is : {hash.hexdigest()}")
             break
+        elif str2hash == 9999999:
+            print("No matches with your hash password's were found")
+            break
+
+        str2hash -= 1
+
+
 
 # Execution
 
 print(find_hash(hash_we_have))
-

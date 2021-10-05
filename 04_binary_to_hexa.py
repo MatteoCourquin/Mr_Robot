@@ -36,7 +36,7 @@ d = 3
 
 # Execution
 
-if len(binary) == 20:
+if len(binary) == 20 and binary.isnumeric():
 
     for i in range(5):
 
