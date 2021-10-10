@@ -21,7 +21,10 @@ def return_hexa(result):
         hexa = "F"
 
     print(f"Héxa is {hexa}")
-    print(f"Décimal is {result}")
+    # print("Décimal is ")
+    print("Décimal is ", end='')
+    return result
+
 
 
 
@@ -40,7 +43,7 @@ if len(binary) == 20 and binary.isnumeric():
 
     for i in range(5):
 
-        result = ((int(binary[a])) * (2 ** 3)) + ((int(binary[b])) * (2 ** 2)) + ((int(binary[c])) * (2 ** 1)) + ((int(binary[d])) * (2 ** 0))
+        result = (int(binary[a]) * (2 ** 3)) + (int(binary[b]) * (2 ** 2)) + (int(binary[c]) * (2 ** 1)) + (int(binary[d]) * (2 ** 0))
 
         i += 1
 
